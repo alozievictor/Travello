@@ -16,7 +16,7 @@ body {
 }
 .scrollBackground {
   background: linear-gradient(90.16deg, rgba(122, 218, 234, 0.4408) -1.18%, rgba(25, 165, 188, 0.2262) 99.98%, rgba(67, 181, 200, 0.203) 99.99%),
-    linear-gradient(180deg, rgba(128, 191, 201, 0.85) 0%, rgba(145, 214, 226, 0.53) 100%);
+    /* linear-gradient(180deg, rgba(128, 191, 201, 0.85) 0%, rgba(145, 214, 226, 0.53) 100%); */
   ;
 }
 .Hero {
