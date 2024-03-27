@@ -8,6 +8,7 @@ import axios from "axios";
 import Loader from "./Loader";
 // import { Link } from "react-router-dom";
 import { GridLoader } from "react-spinners";
+import Ser from "../assets/Serv.jpeg";
 
 const StudyNow = () => {
   const [color] = React.useState("#265670");
@@ -37,7 +38,7 @@ const StudyNow = () => {
         toast.error("Please fill all inputs");
         return;
       }
-     
+
       setLoading(true);
       const response = await axios.post(
         "https://faxxway-delivery-api.onrender.com/api/study/apply",
@@ -80,53 +81,25 @@ const StudyNow = () => {
   return (
     <div>
       <Navbar />
-      <main class="w-full h-[80vh] md:h-[100vh] bg-[#265670] py-[32%] md:py-[15%]">
-        <svg
-          class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"
-          viewBox="0 0 100 100"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="80"
-            cy="10"
-            r="10"
-            fill="none"
-            stroke="#ffffff"
-            stroke-width="2"
-            opacity="0.2"
-          />
-          <circle
-            cx="20"
-            cy="45"
-            r="2"
-            fill="none"
-            stroke="#ffffff"
-            stroke-width="2"
-            opacity="0.1"
-          />
-        </svg>
-        <div class="flex w-[95%] md:w-1/2 mb-10">
-          <div class="line w-[2%] bg-[#f39c12]"></div>
-          <div class="w-full pb-10 relative pl-6 md:w-[85%] mx-auto">
-            <p class="text-white text-xl font-medium mx-2 md:mx-3">
-              Reach out to us for a seamless study programs, where every detail
-              is tailored to your needs.
-            </p>
-            <h1 class="text-white capitalize font-bold text-[35px] md:text-5xl py-2">
-              our study program
+
+      <main
+        class="w-full h-[80vh] py-[32%] md:py-[15%] bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(${Ser})`,
+        }}
+      >
+        <div class="flex w-full mb-10">
+          <div class="w-full relative">
+            <h1 class="text-white text-center capitalize font-bold text-[35px] md:text-5xl py-2">
+              Services
             </h1>
-            <ul class="flex items-center my-5 text-white">
-              <li class="">
-                <a href="/">Home</a>
-              </li>
-              <div class="w-[7%] h-[2px] bg-white mx-5"></div>
-              <li>
-                <a href="/study">Study</a>
-              </li>
-            </ul>
+            <p class="text-white text-center capitalize font-light text-2xl md:text-2xl py-2">
+              Modern & Beautiful Travel Theme
+            </p>
           </div>
         </div>
       </main>
+
       <section className="w-[95%] md:w-[80%] mx-auto bg-white px-3 md:px-0">
         <div className="py-[60px] md:py-[80px] grid md:grid-cols-2 gap-16">
           <div class="box-img py-2">
